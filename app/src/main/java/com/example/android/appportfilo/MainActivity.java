@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -16,7 +17,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("My App Portfilo");
+        //setTitle("My App Portfilo");
     }
 
     @Override
@@ -41,51 +42,14 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void pushSpotifyStreamer(View view)
-    {
-        Toast toast = createToast("This button will launch spotify streamer app");
+    //This will be executed when pressing any button
+    //Note: The same can be implemented using switch statemnt according to id
+    //switch (view.getId())  ---->  case R.id.idName:
+    public void showToast(View view) {
+        Button button = (Button) view;
+        CharSequence text = "This button will launch " + button.getText() + "  app";
+        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 50);
         toast.show();
-    }
-
-    public void pushScoresApp(View view)
-    {
-        Toast toast = createToast("This button will launch scores app");
-        toast.show();
-    }
-
-    public void pushLibraryApp(View view)
-    {
-        Toast toast = createToast("This button will launch library app");
-        toast.show();
-    }
-
-    public void pushBuildIt(View view)
-    {
-        Toast toast = createToast("This button will launch build it bigger app");
-        toast.show();
-    }
-
-    public void pushXYZ(View view)
-    {
-        Toast toast = createToast("This button will launch xyz reader app");
-        toast.show();
-    }
-
-    public void pushCapstone(View view)
-    {
-        Toast toast = createToast("This button will launch my capstone app");
-        toast.show();
-    }
-
-    private Toast createToast(String msg)
-    {
-        Context context = getApplicationContext();
-        CharSequence text = msg;
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 50);
-        return toast;
-        //toast.show();
     }
 }
