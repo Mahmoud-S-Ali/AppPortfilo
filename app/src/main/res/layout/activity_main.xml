@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/LightBlue"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,76 +11,34 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="26dp"
+        android:fontFamily="sans-serif-medium"
         android:text="My Nanodegree Apps!"
-        android:textSize="26sp"
-        android:fontFamily="sans-serif-medium"/>
+        android:textSize="@dimen/title_text_size" />
 
-    <Button
+    <Button     style="@style/ButtonStyle"
         android:id="@+id/button_id_spotifyStreamer"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
-        android:text="Spotify Streamer"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
-        android:background="@color/Orange"
-        android:onClick="pushSpotifyStreamer"/>
+        android:text="Spotify Streamer" />
 
-    <Button
+    <Button     style="@style/ButtonStyle"
         android:id="@+id/button_id_scoresApp"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="Scores App"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
-        android:background="@color/Orange"
-        android:onClick="pushScoresApp"/>
-    <Button
+        android:text="Scores App" />
+
+    <Button     style="@style/ButtonStyle"
         android:id="@+id/button_id_libraryApp"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="Library App"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
-        android:background="@color/Orange"
-        android:onClick="pushLibraryApp"/>
-    <Button
+        android:text="Library App" />
+
+    <Button     style="@style/ButtonStyle"
         android:id="@+id/button_id_buildIt"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="Build It Bigger"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
-        android:background="@color/Orange"
-        android:onClick="pushBuildIt"/>
-    <Button
+        android:text="Build It Bigger" />
+
+    <Button     style="@style/ButtonStyle"
         android:id="@+id/button_id_xyzReader"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="XYZ Reader"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
-        android:background="@color/Orange"
-        android:onClick="pushXYZ"/>
-    <Button
+        android:text="XYZ Reader" />
+
+    <Button     style="@style/ButtonStyle"
         android:id="@+id/button_id_capstone"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="Capstone: My Own App"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
         android:background="@color/DarkPink"
-        android:onClick="pushCapstone"/>
+        android:text="Capstone: My Own App" />
 
 </LinearLayout>
